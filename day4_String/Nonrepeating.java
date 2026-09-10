@@ -2,7 +2,7 @@ package day4_String;
 
 import java.util.Scanner;
 
-public class Counteachchar {
+public class Nonrepeating {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -40,7 +40,11 @@ public class Counteachchar {
         }
         for(int i=0;i<len;i++)
         {
-            System.out.println(c.charAt(i)+"="+finl[i]);
+            
+            if(finl[i]==1){
+                System.out.print(c.charAt(i));
+                break;
+            }
         }
         
     }
