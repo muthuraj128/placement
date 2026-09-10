@@ -1,4 +1,4 @@
-package day3_String;
+package day4_String;
 
 public class Compare {
     public static void main(String[] args){
