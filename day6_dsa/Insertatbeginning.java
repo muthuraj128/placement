@@ -1,7 +1,5 @@
-package day7_dsa;
-
-public class Circularlinkedlist {
-        public static void main(String[] args){
+public class Insertatbeginning {
+    public static void main(String[] args){
         Ll obj=new Ll();
         obj.addatend(10);
         obj.addatend(20);
@@ -10,7 +8,6 @@ public class Circularlinkedlist {
         obj.display();
     }
 }
-
 class Ll{
     int data;
     Ll next;
@@ -21,24 +18,19 @@ class Ll{
         {
             head=nnode;
             head.data=data;
-            head.next=head;
             return;
         }
         Ll temp=head;
-        while(temp.next!=head)
-        {
-            temp=temp.next;
-        }
-        temp.next=nnode;
-        temp.next.data=data;
-        nnode.next=head;
+        head=nnode;
+        head.next=temp;
+        head.data=data;
     }
     void display(){
         Ll temp=head;
-        do
-        {
+        while(temp!=null){
             System.out.println(temp.data);
-            temp=temp.next;    
-        }while(temp!=head);
+            temp=temp.next;
+        }
     }
 }
+

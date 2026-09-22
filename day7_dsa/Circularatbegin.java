@@ -1,7 +1,7 @@
 package day7_dsa;
 
-public class Circularlinkedlist {
-        public static void main(String[] args){
+public class Circularatbegin {
+    public static void main(String[] args){
         Ll obj=new Ll();
         obj.addatend(10);
         obj.addatend(20);
@@ -30,8 +30,9 @@ class Ll{
             temp=temp.next;
         }
         temp.next=nnode;
-        temp.next.data=data;
         nnode.next=head;
+        nnode.data=data;
+        head=nnode;
     }
     void display(){
         Ll temp=head;
